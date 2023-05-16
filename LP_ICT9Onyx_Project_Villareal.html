@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Unit Converter</title>
+</head>
+<style>
+	* {
+    margin: 0;
+    padding: 0;
+    box-sizing: ;
+
+}
+h1
+{
+    font-family: 'Times New Roman', sans-serif;
+    font-size: 50;
+    color: palegoldenrod;
+
+}
+body {
+    font-family: 'Rockwell', sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	background: lightslategrey;
+	padding: 20px;
+	background: url(https://static.vecteezy.com/system/resources/thumbnails/000/131/673/small/vector-colorful-number-pattern.jpg);
+}
+.container {
+	padding: 64px;
+	border-radius: 40px;
+	max-width: 600px;
+	width: 100%;
+	background: hotpink;
+	box-shadow: 20px 20px 40px rgba(0,0,0,0.08), -8px -8px 16px rgba(0,0,0,0.1) inset;
+}
+.title {
+	text-align: center;
+}
+.input-container {
+	margin-top: 25px;
+	display: flex;
+	flex-direction: column;
+}
+.input-container input {
+	padding: 10px;
+	border-radius: 8px;
+	margin-top: 8px;
+	border: black;
+	box-shadow: none !important;
+	outline: 2;
+}
+</style>
+<body>
+	<div class="container">
+		<h1 class="title">Unit Converter</h1>
+		<div class="input-container">
+			<label for="millimeter">Millimeter</label>
+			<input type="number" id="millimeter" placeholder="Millimeter"
+				oninput="millimeter(parseFloat(this.value))" />
+		</div>
+		<div class="input-container">
+			<label for="centimeter">Centimeter</label>
+			<input type="number" id="centimeter" placeholder="Centimeter"
+				onchange="centimeter(parseFloat(this.value))" />
+		</div>
+		<div class="input-container">
+			<label for="meter">Meter</label>
+			<input type="number" id="meter" placeholder="Meter" onchange="meter(parseFloat(this.value))" />
+		</div>
+		<div class="input-container">
+			<label for="kilometer">Kilometer</label>
+			<input type="number" id="kilometer" placeholder="Kilometer" onchange="kilometer(parseFloat(this.value))" />
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+   
+
+</html>
